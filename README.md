@@ -134,16 +134,16 @@ O sistema foi modelado utilizando UML e possui as seguintes entidades principais
 
 ## Requisitos Implementados
 
-* ✔ Implementação das classes do diagrama UML
-* ✔ Identificadores automáticos utilizando atributos estáticos
-* ✔ Persistência de dados em arquivos
-* ✔ Classe abstrata
-* ✔ Operações de Inclusão, Exclusão, Alteração, Consulta e Listagem (CRUD)
-* ✔ Interface gráfica utilizando JOptionPane
-* ✔ Tratamento de exceções personalizadas
-* ✔ Utilização de ArrayList
-* ✔ Documentação com Javadoc
-* ✔ Geração do arquivo JAR
+* Implementação das classes do diagrama UML
+* Identificadores automáticos utilizando atributos estáticos
+* Persistência de dados em arquivos
+* Classe abstrata
+* Operações de Inclusão, Exclusão, Alteração, Consulta e Listagem (CRUD)
+* Interface gráfica utilizando JOptionPane
+* Tratamento de exceções personalizadas
+* Utilização de ArrayList
+* Documentação com Javadoc
+* Geração do arquivo JAR
 
 ---
 
