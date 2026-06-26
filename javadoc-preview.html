@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Loja de Moda - Javadoc (Prévia)</title>
+<style>
+  :root {
+    --bg: #fdfdfb;
+    --panel: #ffffff;
+    --border: #e0ddd4;
+    --text: #2b2925;
+    --muted: #6b6657;
+    --accent: #8a5a3c;
+    --accent-soft: #f3e9e0;
+    --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  header {
+    background: var(--text);
+    color: #f3efe8;
+    padding: 28px 40px;
+  }
+  header h1 { margin: 0 0 4px; font-size: 1.5rem; font-weight: 600; }
+  header p { margin: 0; color: #c9c2b3; font-size: 0.92rem; }
+  .notice {
+    margin: 24px 40px;
+    padding: 16px 20px;
+    background: var(--accent-soft);
+    border-left: 4px solid var(--accent);
+    border-radius: 4px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 0.92rem;
+    color: #5a4636;
+  }
+  .layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 0;
+    margin: 0 40px 60px;
+  }
+  nav {
+    border-right: 1px solid var(--border);
+    padding-right: 24px;
+  }
+  nav h2 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 24px 0 8px;
+  }
+  nav ul { list-style: none; margin: 0; padding: 0; }
+  nav li { margin: 2px 0; }
+  nav a {
+    display: block;
+    padding: 5px 8px;
+    border-radius: 4px;
+    color: var(--accent);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 0.86rem;
+  }
+  nav a:hover { background: var(--accent-soft); }
+  nav .tag {
+    display: inline-block;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 0.68rem;
+    color: var(--muted);
+    margin-left: 4px;
+  }
+  main { padding: 24px 0 0 40px; }
+  .pkg-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    background: var(--panel);
+  }
+  .pkg-card h3 {
+    font-family: var(--mono);
+    font-size: 1.05rem;
+    margin: 0 0 6px;
+    color: var(--text);
+  }
+  .pkg-card p { margin: 0 0 10px; color: var(--muted); font-size: 0.95rem; }
+  .pkg-card .classes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .pkg-card .classes span {
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    background: var(--accent-soft);
+    color: #5a4636;
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+  .pkg-card .classes span.abstract { font-style: italic; border: 1px dashed var(--accent); background: transparent; }
+  footer {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 0.82rem;
+    color: var(--muted);
+    text-align: center;
+    padding: 24px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Sistema de Gerenciamento de Loja de Moda</h1>
+  <p>Documentação da API — gerada a partir dos comentários Javadoc presentes no código-fonte</p>
+</header>
+
+<div class="notice">
+  <strong>Prévia estática.</strong> Esta página foi montada manualmente como prévia,
+  já que o ambiente usado para gerar este pacote não possui a ferramenta <code>javadoc</code>
+  instalada. Ao rodar <code>./build.sh</code> ou <code>mvn javadoc:javadoc</code> na sua
+  máquina (com JDK 17+), a documentação HTML completa e navegável será gerada automaticamente
+  a partir dos comentários <code>/** ... */</code> já presentes em todas as classes.
+</div>
+
+<div class="layout">
+  <nav>
+    <h2>com.lojamoda</h2>
+    <ul><li><a href="#main">Main</a></li></ul>
+
+    <h2>com.lojamoda.model</h2>
+    <ul>
+      <li><a href="#produto">Produto</a> <span class="tag">abstract</span></li>
+      <li><a href="#roupa">Roupa</a></li>
+      <li><a href="#calcado">Calcado</a></li>
+      <li><a href="#cliente">Cliente</a></li>
+      <li><a href="#pedido">Pedido</a></li>
+    </ul>
+
+    <h2>com.lojamoda.exception</h2>
+    <ul>
+      <li><a href="#estoque">EstoqueInsuficienteException</a></li>
+      <li><a href="#naoencontrada">EntidadeNaoEncontradaException</a></li>
+      <li><a href="#cpf">CpfInvalidoException</a></li>
+    </ul>
+
+    <h2>com.lojamoda.persistence</h2>
+    <ul><li><a href="#dao">ArquivoDAO&lt;T&gt;</a></li></ul>
+
+    <h2>com.lojamoda.service</h2>
+    <ul>
+      <li><a href="#clienteservice">ClienteService</a></li>
+      <li><a href="#produtoservice">ProdutoService</a></li>
+      <li><a href="#pedidoservice">PedidoService</a></li>
+    </ul>
+
+    <h2>com.lojamoda.ui</h2>
+    <ul>
+      <li><a href="#clienteui">ClienteUI</a></li>
+      <li><a href="#produtoui">ProdutoUI</a></li>
+      <li><a href="#pedidoui">PedidoUI</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="pkg-card" id="main">
+      <h3>com.lojamoda</h3>
+      <p>Ponto de entrada da aplicação. Monta os serviços e interfaces, e exibe o menu principal via JOptionPane.</p>
+      <div class="classes"><span>Main</span></div>
+    </div>
+
+    <div class="pkg-card" id="produto">
+      <h3>com.lojamoda.model</h3>
+      <p>Classes de domínio: <code>Produto</code> (abstrata, base para herança), suas especializações
+        <code>Roupa</code> e <code>Calcado</code>, além de <code>Cliente</code> e <code>Pedido</code>
+        (associação 1:1 com Cliente e agregação 1:N com Produto via <code>ArrayList</code>).</p>
+      <div class="classes">
+        <span class="abstract">Produto</span>
+        <span>Roupa</span>
+        <span>Calcado</span>
+        <span>Cliente</span>
+        <span>Pedido</span>
+      </div>
+    </div>
+
+    <div class="pkg-card" id="estoque">
+      <h3>com.lojamoda.exception</h3>
+      <p>Exceções customizadas de negócio: estoque insuficiente na venda, entidade não encontrada
+        em consultas/alterações/exclusões, e CPF inválido ou duplicado no cadastro de clientes.</p>
+      <div class="classes">
+        <span>EstoqueInsuficienteException</span>
+        <span>EntidadeNaoEncontradaException</span>
+        <span>CpfInvalidoException</span>
+      </div>
+    </div>
+
+    <div class="pkg-card" id="dao">
+      <h3>com.lojamoda.persistence</h3>
+      <p>Camada de persistência genérica em arquivo binário, usando serialização Java
+        (<code>ObjectOutputStream</code> / <code>ObjectInputStream</code>) sobre <code>ArrayList&lt;T&gt;</code>.</p>
+      <div class="classes"><span>ArquivoDAO&lt;T extends Serializable&gt;</span></div>
+    </div>
+
+    <div class="pkg-card" id="clienteservice">
+      <h3>com.lojamoda.service</h3>
+      <p>Regras de negócio e operações de CRUD completo para Clientes, Produtos e Pedidos,
+        incluindo validação de estoque, geração de IDs e persistência automática após cada alteração.</p>
+      <div class="classes">
+        <span>ClienteService</span>
+        <span>ProdutoService</span>
+        <span>PedidoService</span>
+      </div>
+    </div>
+
+    <div class="pkg-card" id="clienteui">
+      <h3>com.lojamoda.ui</h3>
+      <p>Interfaces gráficas baseadas em <code>JOptionPane</code> para cada caso de uso do sistema
+        (Manter Clientes, Manter Produtos, Registrar Venda).</p>
+      <div class="classes">
+        <span>ClienteUI</span>
+        <span>ProdutoUI</span>
+        <span>PedidoUI</span>
+      </div>
+    </div>
+  </main>
+</div>
+
+<footer>
+  Gere a documentação completa com <code>./build.sh</code> (saída em <code>docs/javadoc/index.html</code>)
+  ou <code>mvn javadoc:javadoc</code>.
+</footer>
+
+</body>
+</html>

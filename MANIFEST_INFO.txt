@@ -1,0 +1,13 @@
+ATENCAO: Este JAR contem o CODIGO-FONTE (.java) do projeto, nao classes
+compiladas (.class), pois o ambiente de geracao deste pacote nao possui
+o JDK completo (apenas o JRE, sem javac) e nao tem acesso a internet
+para instalar o JDK.
+
+Para compilar e gerar um JAR executavel de verdade na sua maquina:
+
+  cd LojaModaApp
+  chmod +x build.sh
+  ./build.sh
+  java -jar out/LojaModaApp.jar
+
+Veja o README.md para instrucoes detalhadas e alternativas (Maven, etc).
