@@ -11,7 +11,7 @@ package com.lojamoda.model;
  * {@code exibirDetalhes()} de forma própria, conforme exigido pelo
  * requisito RF02 (gerenciamento de Roupas e Calçados).</p>
  *
- * @author Elisa Correia, Emilly Ranny, Jolie Pavan
+ * @author Elisa Correia, Emilly Ranny, Jolie Pavan, Thyago Divino
  */
 public class Calcado extends Produto {
 
@@ -44,6 +44,15 @@ public class Calcado extends Produto {
     public String exibirDetalhes() {
         return String.format(
                 "Calçado #%d | Nome: %s | Preço: R$ %.2f | Estoque: %d | Numeração: %d | Material: %s",
+                getId(), getNome(), getPreco(), getQtdEstoque(), numeracao, material);
+    }
+
+    /**
+     * Sobrescreve o método toString para exibição limpa e estruturada com ID na listagem do JOptionPane.
+     */
+    @Override
+    public String toString() {
+        return String.format("[ID: %d] Calçado: %s - R$ %.2f (Estoque: %d) | Nº: %d, Material: %s", 
                 getId(), getNome(), getPreco(), getQtdEstoque(), numeracao, material);
     }
 
