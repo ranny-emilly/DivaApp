@@ -9,30 +9,14 @@ import com.lojamoda.service.ProdutoService;
 import javax.swing.JOptionPane;
 import java.util.ArrayList;
 
-/**
- * Interface gráfica (baseada em {@link JOptionPane}) para o gerenciamento
- * completo (CRUD) do catálogo de {@link Produto} (Roupas e Calçados),
- * implementando o caso de uso <b>UC02: Manter Produtos</b>.
- *
- * @author Elisa Correia, Emilly Ranny, Jolie Pavan
- */
 public class ProdutoUI {
 
     private final ProdutoService service;
 
-    /**
-     * Cria a interface de produtos associada ao serviço informado.
-     *
-     * @param service serviço de produtos utilizado para executar as operações de negócio
-     */
     public ProdutoUI(ProdutoService service) {
         this.service = service;
     }
 
-    /**
-     * Exibe o menu principal de gerenciamento de produtos e processa a
-     * opção escolhida pelo usuário em loop, até que ele opte por voltar.
-     */
     public void exibirMenu() {
         boolean continuar = true;
         while (continuar) {
@@ -154,12 +138,6 @@ public class ProdutoUI {
         JOptionPane.showMessageDialog(null, sb.toString(), "Lista de Produtos", JOptionPane.INFORMATION_MESSAGE);
     }
 
-    /**
-     * Solicita ao usuário um valor inteiro via caixa de diálogo.
-     *
-     * @param mensagem texto exibido na caixa de diálogo
-     * @return o valor informado, ou {@code null} se o usuário cancelar ou digitar um valor inválido
-     */
     private Integer lerInt(String mensagem) {
         String texto = JOptionPane.showInputDialog(mensagem);
         if (texto == null) return null;
@@ -171,12 +149,6 @@ public class ProdutoUI {
         }
     }
 
-    /**
-     * Solicita ao usuário um valor decimal (preço) via caixa de diálogo.
-     *
-     * @param mensagem texto exibido na caixa de diálogo
-     * @return o valor informado, ou {@code null} se o usuário cancelar ou digitar um valor inválido
-     */
     private Double lerDouble(String mensagem) {
         String texto = JOptionPane.showInputDialog(mensagem);
         if (texto == null) return null;
