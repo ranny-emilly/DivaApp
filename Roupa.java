@@ -6,7 +6,7 @@ package com.lojamoda.model;
  * <p>É uma especialização (herança) de {@link Produto}, adicionando os
  * atributos específicos do setor de moda: tamanho e cor.</p>
  *
- * @author Elisa Correia, Emilly Ranny, Jolie Pavan
+ * @author Elisa Correia, Emilly Ranny, Jolie Pavan, Thyago Divino
  */
 public class Roupa extends Produto {
 
@@ -39,6 +39,15 @@ public class Roupa extends Produto {
     public String exibirDetalhes() {
         return String.format(
                 "Roupa #%d | Nome: %s | Preço: R$ %.2f | Estoque: %d | Tamanho: %s | Cor: %s",
+                getId(), getNome(), getPreco(), getQtdEstoque(), tamanho, cor);
+    }
+
+    /**
+     * Sobrescreve o método toString para exibição limpa e estruturada com ID na listagem do JOptionPane.
+     */
+    @Override
+    public String toString() {
+        return String.format("[ID: %d] Roupa: %s - R$ %.2f (Estoque: %d) | Tam: %s, Cor: %s", 
                 getId(), getNome(), getPreco(), getQtdEstoque(), tamanho, cor);
     }
 
