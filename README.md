@@ -156,12 +156,3 @@ Esses arquivos são lidos automaticamente ao iniciar a aplicação e regravados 
 
 ---
 
-# Observação sobre o RNF02 (Banco de Dados Relacional)
-
-O documento de especificação lista como requisito não funcional:
-
-> **RNF02:** O sistema deve utilizar bancos de dados relacionais.
-
-A implementação entregue atende ao requisito funcional de persistência (RF05) utilizando arquivos binários locais por meio de serialização Java, conforme solicitado nos itens referentes ao uso de arquivos para armazenamento e listas para manipulação dos dados.
-
-Caso seja necessário atender ao RNF02 utilizando um SGBD relacional (como SQLite, H2 ou MySQL via JDBC), a camada `ArquivoDAO` pode ser substituída por uma implementação baseada em JDBC sem necessidade de alterações nas camadas `model`, `service` ou `ui`, devido à organização da aplicação em camadas.
