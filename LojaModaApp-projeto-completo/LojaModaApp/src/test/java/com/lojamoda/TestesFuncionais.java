@@ -14,20 +14,6 @@ import com.lojamoda.service.ProdutoService;
 import java.io.File;
 import java.util.ArrayList;
 
-/**
- * Suíte de testes funcionais do sistema de gerenciamento da Loja de Moda.
- *
- * <p>Esta classe não depende de bibliotecas externas (como JUnit) para
- * permitir execução em qualquer ambiente apenas com o JDK padrão. Cada
- * teste é um método que executa um cenário e verifica o resultado com
- * asserções simples, reportando sucesso ou falha no console.</p>
- *
- * <p>Os testes utilizam um diretório de dados isolado
- * ({@code dados-teste/}) para não interferir nos dados reais da
- * aplicação gravados em {@code dados/}.</p>
- *
- * @author Elisa Correia, Emilly Ranny, Jolie Pavan
- */
 public class TestesFuncionais {
 
     private static int totalTestes = 0;
@@ -41,9 +27,7 @@ public class TestesFuncionais {
     public static void main(String[] args) {
         limparDadosDeTeste();
 
-        System.out.println("=========================================================");
         System.out.println(" SUÍTE DE TESTES FUNCIONAIS - SISTEMA LOJA DE MODA");
-        System.out.println("=========================================================\n");
 
         testeCT01_IncluirClienteComCpfValido();
         testeCT02_IncluirClienteComCpfInvalido_DeveLancarExcecao();
@@ -61,9 +45,7 @@ public class TestesFuncionais {
         testeCT14_PersistenciaEmArquivo_DadosSobrevivemAoReinicio();
         testeCT15_CalculoDoValorTotalDoPedido();
 
-        System.out.println("\n=========================================================");
         System.out.printf(" RESULTADO FINAL: %d/%d testes passaram%n", (totalTestes - totalFalhas), totalTestes);
-        System.out.println("=========================================================");
 
         limparDadosDeTeste();
     }
