@@ -21,7 +21,7 @@ Recomenda-se executar `./build.sh` (ou os comandos equivalentes) antes da entreg
 # Estrutura do projeto
 
 ```text
-C:.
+
 ├───LojaModaApp-projeto-completo
 │   └───LojaModaApp
 │       ├───.agents
