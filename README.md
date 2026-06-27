@@ -1,4 +1,4 @@
-# Sistema de Gerenciamento de Loja de Moda
+# Sistema de Gerenciamento do DivaApp
 
 Aplicação Java Desktop para gerenciamento de **Clientes**, **Produtos** (Roupas e Calçados) e **Pedidos de Venda**, com persistência local em arquivos binários e interface gráfica baseada em `JOptionPane`.
 
@@ -21,7 +21,7 @@ Recomenda-se executar `./build.sh` (ou os comandos equivalentes) antes da entreg
 # Estrutura do projeto
 
 ```text
-─LojaModaApp
+─LojaDivaApp
     ├───.idea
     ├───build
     │   └───com
