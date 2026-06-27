@@ -19,11 +19,6 @@ public class TestesFuncionais {
     private static int totalTestes = 0;
     private static int totalFalhas = 0;
 
-    /**
-     * Executa todos os casos de teste funcionais e imprime um relatório no console.
-     *
-     * @param args argumentos de linha de comando (não utilizados)
-     */
     public static void main(String[] args) {
         limparDadosDeTeste();
 
