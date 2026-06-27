@@ -1,0 +1,16 @@
+﻿C:\Users\pavan\Downloads\javac\LojaModaApp-projeto-completo\LojaModaApp\src\main\java\com\lojamoda\Main.java
+C:\Users\pavan\Downloads\javac\LojaModaApp-projeto-completo\LojaModaApp\src\main\java\com\lojamoda\exception\CpfInvalidoException.java
+C:\Users\pavan\Downloads\javac\LojaModaApp-projeto-completo\LojaModaApp\src\main\java\com\lojamoda\exception\EntidadeNaoEncontradaException.java
+C:\Users\pavan\Downloads\javac\LojaModaApp-projeto-completo\LojaModaApp\src\main\java\com\lojamoda\exception\EstoqueInsuficienteException.java
+C:\Users\pavan\Downloads\javac\LojaModaApp-projeto-completo\LojaModaApp\src\main\java\com\lojamoda\model\Calcado.java
+C:\Users\pavan\Downloads\javac\LojaModaApp-projeto-completo\LojaModaApp\src\main\java\com\lojamoda\model\Cliente.java
+C:\Users\pavan\Downloads\javac\LojaModaApp-projeto-completo\LojaModaApp\src\main\java\com\lojamoda\model\Pedido.java
+C:\Users\pavan\Downloads\javac\LojaModaApp-projeto-completo\LojaModaApp\src\main\java\com\lojamoda\model\Produto.java
+C:\Users\pavan\Downloads\javac\LojaModaApp-projeto-completo\LojaModaApp\src\main\java\com\lojamoda\model\Roupa.java
+C:\Users\pavan\Downloads\javac\LojaModaApp-projeto-completo\LojaModaApp\src\main\java\com\lojamoda\persistence\ArquivoDAO.java
+C:\Users\pavan\Downloads\javac\LojaModaApp-projeto-completo\LojaModaApp\src\main\java\com\lojamoda\service\ClienteService.java
+C:\Users\pavan\Downloads\javac\LojaModaApp-projeto-completo\LojaModaApp\src\main\java\com\lojamoda\service\PedidoService.java
+C:\Users\pavan\Downloads\javac\LojaModaApp-projeto-completo\LojaModaApp\src\main\java\com\lojamoda\service\ProdutoService.java
+C:\Users\pavan\Downloads\javac\LojaModaApp-projeto-completo\LojaModaApp\src\main\java\com\lojamoda\ui\ClienteUI.java
+C:\Users\pavan\Downloads\javac\LojaModaApp-projeto-completo\LojaModaApp\src\main\java\com\lojamoda\ui\PedidoUI.java
+C:\Users\pavan\Downloads\javac\LojaModaApp-projeto-completo\LojaModaApp\src\main\java\com\lojamoda\ui\ProdutoUI.java

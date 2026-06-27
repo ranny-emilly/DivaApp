@@ -25,6 +25,7 @@
     <build>
         <finalName>LojaModaApp</finalName>
         <plugins>
+            <!-- Plugin responsavel por gerar o JAR executavel (com Main-Class no manifest) -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -38,6 +39,7 @@
                 </configuration>
             </plugin>
 
+            <!-- Plugin responsavel por gerar a documentacao Javadoc -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>

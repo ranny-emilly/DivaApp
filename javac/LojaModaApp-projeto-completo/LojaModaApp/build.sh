@@ -1,3 +1,12 @@
+#!/bin/bash
+# =============================================================================
+# Script de build do Sistema de Gerenciamento de Loja de Moda
+# Compila o projeto, gera o JAR executavel e a documentacao Javadoc,
+# usando apenas as ferramentas padrao do JDK (sem necessidade de Maven).
+#
+# Pre-requisito: JDK 17+ instalado (com javac, javadoc e jar no PATH).
+# Uso: ./build.sh
+# =============================================================================
 
 set -e
 

@@ -74,7 +74,7 @@ public class Cliente implements Serializable {
     }
 
     @Override
-public String toString() {
-    return "[ID: " + this.id + "] Nome: " + this.nome + " | CPF: " + this.cpf;
+    public String toString() {
+        return String.format("Cliente #%d | Nome: %s | CPF: %s", id, nome, cpf);
     }
 }

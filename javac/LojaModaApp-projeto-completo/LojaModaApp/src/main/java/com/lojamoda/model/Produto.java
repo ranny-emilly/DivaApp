@@ -103,6 +103,6 @@ public abstract class Produto implements Serializable {
 
     @Override
     public String toString() {
-    return "[ID: " + this.id + "] " + this.nome + " - R$ " + String.format("%.2f", this.preco) + " (Estoque: " + this.qtdEstoque + ")";
+        return exibirDetalhes();
     }
 }
