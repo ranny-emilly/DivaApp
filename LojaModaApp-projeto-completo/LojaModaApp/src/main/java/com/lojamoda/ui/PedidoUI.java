@@ -12,36 +12,18 @@ import com.lojamoda.service.ProdutoService;
 import javax.swing.JOptionPane;
 import java.util.ArrayList;
 
-/**
- * Interface gráfica (baseada em {@link JOptionPane}) para o registro de
- * vendas (pedidos), implementando o caso de uso <b>UC03: Registrar
- * Venda</b>, além das consultas e exclusões (cancelamento) relacionadas.
- *
- * @author Elisa Correia, Emilly Ranny, Jolie Pavan
- */
 public class PedidoUI {
 
     private final PedidoService pedidoService;
     private final ClienteService clienteService;
     private final ProdutoService produtoService;
 
-    /**
-     * Cria a interface de pedidos associada aos serviços informados.
-     *
-     * @param pedidoService  serviço de pedidos utilizado para registrar vendas
-     * @param clienteService serviço de clientes utilizado para selecionar o comprador
-     * @param produtoService serviço de produtos utilizado para selecionar os itens vendidos
-     */
     public PedidoUI(PedidoService pedidoService, ClienteService clienteService, ProdutoService produtoService) {
         this.pedidoService = pedidoService;
         this.clienteService = clienteService;
         this.produtoService = produtoService;
     }
 
-    /**
-     * Exibe o menu principal de gerenciamento de pedidos e processa a
-     * opção escolhida pelo usuário em loop, até que ele opte por voltar.
-     */
     public void exibirMenu() {
         boolean continuar = true;
         while (continuar) {
@@ -178,12 +160,6 @@ public class PedidoUI {
         JOptionPane.showMessageDialog(null, sb.toString(), "Lista de Pedidos", JOptionPane.INFORMATION_MESSAGE);
     }
 
-    /**
-     * Solicita ao usuário um valor inteiro via caixa de diálogo.
-     *
-     * @param mensagem texto exibido na caixa de diálogo
-     * @return o valor informado, ou {@code null} se o usuário cancelar ou digitar um valor inválido
-     */
     private Integer lerInt(String mensagem) {
         String texto = JOptionPane.showInputDialog(mensagem);
         if (texto == null) return null;
