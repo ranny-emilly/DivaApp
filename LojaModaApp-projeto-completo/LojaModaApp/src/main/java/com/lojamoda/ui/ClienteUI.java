@@ -8,36 +8,21 @@ import com.lojamoda.service.ClienteService;
 import javax.swing.JOptionPane;
 import java.util.ArrayList;
 
-/**
- * Interface gráfica (baseada em {@link JOptionPane}) para o gerenciamento
- * completo (CRUD) de {@link Cliente}, implementando o caso de uso
- * <b>UC01: Manter Clientes</b>.
- *
- * @author Elisa Correia, Emilly Ranny, Jolie Pavan
- */
+
 public class ClienteUI {
 
     private final ClienteService service;
 
-    /**
-     * Cria a interface de clientes associada ao serviço informado.
-     *
-     * @param service serviço de clientes utilizado para executar as operações de negócio
-     */
     public ClienteUI(ClienteService service) {
         this.service = service;
     }
 
-    /**
-     * Exibe o menu principal de gerenciamento de clientes e processa a
-     * opção escolhida pelo usuário em loop, até que ele opte por voltar.
-     */
     public void exibirMenu() {
         boolean continuar = true;
         while (continuar) {
             String[] opcoes = {"Incluir", "Consultar", "Alterar", "Excluir", "Listar Todos", "Voltar"};
             int escolha = JOptionPane.showOptionDialog(null,
-                    "=== Gerenciamento de Clientes ===\nEscolha uma operação:",
+                    "   Gerenciamento de Clientes \nEscolha uma operação:",
                     "Manter Clientes",
                     JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE,
                     null, opcoes, opcoes[0]);
@@ -128,12 +113,6 @@ public class ClienteUI {
         JOptionPane.showMessageDialog(null, sb.toString(), "Lista de Clientes", JOptionPane.INFORMATION_MESSAGE);
     }
 
-    /**
-     * Solicita ao usuário um ID numérico via caixa de diálogo.
-     *
-     * @param mensagem texto exibido na caixa de diálogo
-     * @return o ID informado, ou {@code null} se o usuário cancelar ou digitar um valor inválido
-     */
     private Integer lerId(String mensagem) {
         String texto = JOptionPane.showInputDialog(mensagem);
         if (texto == null) {
