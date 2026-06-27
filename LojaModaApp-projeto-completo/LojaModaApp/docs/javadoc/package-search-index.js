@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.lojamoda"},{"l":"com.lojamoda.exception"},{"l":"com.lojamoda.model"},{"l":"com.lojamoda.persistence"},{"l":"com.lojamoda.service"},{"l":"com.lojamoda.ui"}];updateSearchResults();
