@@ -1,0 +1,70 @@
+@startuml
+skinparam classAttributeIconSize 0
+abstract class Produto {
+- {static} contadorId : int
+- id : int
+- nome : String
+- preco : double
+- qtdEstoque : int
++ Produto(nome: String, preco: double, qtdEstoque: int)
++ {abstract} exibirDetalhes() : void
++ getId() : int
++ getNome() : String
++ setNome(nome: String) : void
++ getPreco() : double
++ setPreco(preco: double) : void
++ getQtdEstoque() : int
++ setQtdEstoque(qtdEstoque: int) : void
+}
+class Roupa {
+- tamanho : String
+- cor : String
++ Roupa(nome: String, preco: double, qtdEstoque: int, tamanho: String, cor: String)
++ exibirDetalhes() : void
++ getTamanho() : String
++ setTamanho(tamanho: String) : void
++ getCor() : String
++ setCor(cor: String) : void
+}
+class Cliente {
+- {static} contadorId : int
+- id : int
+- nome : String
+- cpf : String
++ Cliente(nome: String, cpf: String)
++ getId() : int
++ getNome() : String
++ setNome(nome: String) : void
++ getCpf() : String
++ setCpf(cpf: String) : void
+}
+class Pedido {
+- {static} contadorId : int
+- idPedido : int
+- cliente : Cliente
+- produtos : ArrayList<Produto>
+- valorTotal : double
++ Pedido(cliente: Cliente)
++ adicionarProduto(p: Produto) : void
++ calcularTotal() : double
++ getIdPedido() : int
++ getCliente() : Cliente
++ getProdutos() : ArrayList<Produto>
++ getValorTotal() : double
+}
+class Calcado {
+- numeracao : int
+- material : String
++ Calcado(nome: String, preco: double, qtdEstoque: int, numeracao: int, material: String)
++ exibirDetalhes() : void
++ getNumeracao() : int
++ setNumeracao(numeracao: int) : void
++ getMaterial() : String
++ setMaterial(material: String) : void
+}
+' Relacionamentos
+Produto <|-- Roupa : Herança
+Pedido "1" --> "1" Cliente : Associação
+Pedido "1" --> "0..*" Produto : Agregação (ArrayList)
+Produto <|-- Calcado : Herança
+@enduml
